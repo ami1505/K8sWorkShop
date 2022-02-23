@@ -6,11 +6,13 @@ spec:
   containers:
   - name: app1 
     image: supergiantkir/animals:bear
+    port: 80
     volumeMounts:
     - name: redis-persistent-storage
       mountPath: /storage
   - name: app2 
     image: yanivomc/spring-music:latest
+    port: 8080
     volumeMounts:
     - name: redis-persistent-storage
       mountPath: /storage
