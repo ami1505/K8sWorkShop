@@ -20,4 +20,5 @@ spec:
   hostPath:
   - name: app-storage
     path: /tmp/files
+    type: DirectoryOrCreate
   
