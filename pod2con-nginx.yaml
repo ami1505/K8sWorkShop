@@ -9,13 +9,13 @@ spec:
     port: 80
     volumeMounts:
     - name: redis-persistent-storage
-      mountPath: /storage
+      mountPath: /app-storage
   - name: app2 
     image: yanivomc/spring-music:latest
     port: 8080
     volumeMounts:
     - name: redis-persistent-storage
-      mountPath: /storage
+      mountPath: /app-storage
   volumes:
   hostPath:
   - name: app-storage
